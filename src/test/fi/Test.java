@@ -1,5 +1,7 @@
 package test.fi;
 
+import test.fi.impl.CVServiceImpl;
+
 /**
  * Created by IntelliJ IDEA.
  * User: Malli
@@ -11,5 +13,9 @@ public class Test {
     
     public static void main (String [] args) {
         System.out.println("Hello world!!");
+        
+        CVService cvService = new CVServiceImpl();
+        CV cv = cvService.getCV();
+        System.out.println(cv.getName());
     }
 }
